@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.orai.dahta.DesignCanvasLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_canvas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_landscape_17"
+    android:background="@drawable/bg_landscape_17">
+
+    <!-- Keep the existing vehicle layout within the available display and system insets. -->
+<LinearLayout
+    android:layout_width="2560dp"
+    android:layout_height="1440dp"
     android:baselineAligned="false"
     android:orientation="vertical">
 
@@ -473,3 +479,5 @@
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+
+</com.orai.dahta.DesignCanvasLayout>
