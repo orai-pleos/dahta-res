@@ -1,0 +1,31 @@
+<resources>
+    <!-- 운행 중 내비 위에 뜨는 다이나믹 아일랜드 -->
+    <string name="island_compact_title">모시는 중</string>
+    <string name="island_separator">•</string>
+    <string name="island_eta">도착까지 %1$d분</string>
+
+    <string name="island_guide_title">손님을 모시는 중이에요</string>
+    <string name="island_guide_desc">도착 3분 전에 알려드릴게요</string>
+    <string name="island_guide_caption">“Please fasten your seatbelt.” 영어로 안내 중</string>
+
+    <string name="island_arrived_title">도착했어요</string>
+    <string name="island_arrived_desc">요금은 미터기와 연동될 때 표시돼요</string>
+    <string name="island_arrived_caption">“도착했습니다. 뒤에서 오는 차를 꼭 확인해 주세요.”</string>
+
+    <!-- 섬 평소(Compact) 문구: 단계별 -->
+    <string name="island_waiting_title">호출 대기 중</string>
+    <string name="island_call_compact_title">새 호출</string>
+    <string name="island_call_compact_sub">1.2km</string>
+    <string name="island_arrived_compact_title">도착했어요</string>
+
+    <!-- 호출 도착(Expanded) -->
+    <string name="island_call_title">새 호출이 들어왔어요</string>
+    <string name="island_call_desc">120 동행콜 · ○○경로당 정문 · 1.2km</string>
+    <string name="island_call_accept">모시러 가기</string>
+    <string name="island_call_later">나중에</string>
+
+    <string name="island_notification_channel">운행 상태</string>
+    <string name="island_notification_title">닿다 운행 중</string>
+    <string name="island_notification_text">손님 안내 상태를 내비 위에 표시하고 있어요</string>
+    <string name="island_permission_denied">‘다른 앱 위에 표시’ 권한이 없어 운행 상태를 내비 위에 표시할 수 없어요</string>
+</resources>

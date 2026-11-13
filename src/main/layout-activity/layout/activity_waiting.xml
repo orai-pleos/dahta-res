@@ -126,32 +126,6 @@
                     android:layout_marginStart="14dp"
                     android:id="@+id/care_status_text"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="32dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="96dp"
-                    android:orientation="horizontal"
-                    android:id="@+id/btn_end_drive"
-                    android:gravity="center"
-                    android:background="@drawable/bg_flow_button"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:contentDescription="@string/end_drive">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:includeFontPadding="false"
-                        android:fontFamily="@font/bold"
-                        android:text="@string/end_drive"
-                        android:textSize="32sp"
-                        android:textColor="@color/text_dark_secondary"/>
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </FrameLayout>
 </com.orai.dahta.DesignCanvasLayout>

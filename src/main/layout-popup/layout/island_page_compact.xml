@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  섬 페이지 1: 평소(Compact) 알약. 466 x 92dp (Figma 내비 영역 1682dp 폭 기준).
+  단계별 문구(호출 대기 중 / 새 호출 · 1.2km / 모시는 중 · 도착까지 N분)는 CompactIslandPage 가 채운다.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="92dp"
+    android:background="@drawable/bg_island_compact"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="21dp"
+    android:paddingEnd="44dp">
+
+    <ImageView
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_logo_lane_glass_round" />
+
+    <TextView
+        android:id="@+id/island_compact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/island_on_background"
+        android:textSize="29sp" />
+
+    <TextView
+        android:id="@+id/island_compact_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:includeFontPadding="false"
+        android:text="@string/island_separator"
+        android:textColor="@color/island_on_background_secondary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/island_compact_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/medium"
+        android:includeFontPadding="false"
+        android:textColor="@color/island_on_background_secondary"
+        android:textSize="25sp" />
+</LinearLayout>

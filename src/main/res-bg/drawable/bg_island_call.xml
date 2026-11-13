@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 호출 도착 카드: 밝은 배경(다른 섬 상태는 어두운 배경) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/surface_basic" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/island_call_stroke" />
+    <corners android:radius="34dp" />
+</shape>

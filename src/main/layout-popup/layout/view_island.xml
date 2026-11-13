@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  다이나믹 아일랜드(내비 위 오버레이)의 틀. 안은 비어 있고, 지금 단계에 맞는 "페이지" 하나가 들어온다.
+    island_page_compact : 평소 알약            (CompactIslandPage)
+    island_page_guide   : 안내 순간 / 도착 확장  (GuideIslandPage)
+    island_page_call    : 호출 도착 카드         (CallIslandPage)
+  페이지 전환은 IslandOverlayService 가 담당한다.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/island_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />

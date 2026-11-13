@@ -45,6 +45,12 @@
 
     <!-- 닿다 · island -->
     <color name="island_background">#131417</color>
+    <color name="island_on_background">#FFFFFF</color>
+    <color name="island_on_background_secondary">#B8FFFFFF</color>  <!-- 72% -->
+    <color name="island_call_stroke">#1A131417</color>             <!-- 10% -->
+    <color name="island_call_button_primary">#43454C</color>
+    <color name="island_call_button_secondary">#F2F2F2</color>
+    <color name="island_caption_background">#1FFFFFFF</color>      <!-- 12% -->
 
     <!-- 닿다 · app window background -->
     <color name="bg_gradient_start">#F4F8FF</color>
