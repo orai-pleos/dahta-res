@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- pleos DS · informative / regulation -->
+    <color name="informative_positive">#0064FF</color>
+    <color name="informative_active">#02C265</color>
+    <color name="regulation_red">#F62E24</color>
+
+    <!-- pleos DS · text -->
+    <color name="text_dark_primary">#131417</color>
+    <color name="text_dark_secondary">#D6131417</color>      <!-- 84% -->
+    <color name="text_dark_tertiary">#A3131417</color>       <!-- 64% -->
+    <color name="text_light_primary">#FFFFFF</color>
+
+    <!-- pleos DS · icon -->
+    <color name="icon_dark_primary">#131417</color>
+    <color name="icon_dark_secondary">#D6131417</color>      <!-- 84% -->
+    <color name="icon_light_primary">#FFFFFF</color>
+
+    <!-- pleos DS · surface / background / divider / dim -->
+    <color name="surface_basic">#FFFFFF</color>
+    <color name="surface_high">#EDEEF2</color>
+    <color name="surface_accent">#E0E1E6</color>
+    <color name="background_primary">#F7F8FA</color>
+    <color name="divider_secondary">#1A131417</color>        <!-- 10% -->
+    <color name="dim_dark_tertiary">#33131417</color>        <!-- 20% -->
+
+    <!-- 닿다 · tint (흰 배경 위 합성값) -->
+    <color name="informative_positive_tint">#E0ECFF</color> <!-- 파랑 12% -->
+    <color name="informative_active_tint">#CCF3E0</color>   <!-- 초록 20% -->
+
+    <!-- 닿다 · 초록 위 글자/아이콘 (day/night 공통) -->
+    <color name="on_informative_active">#131417</color>
+
+    <!-- 닿다 · brand (앱 아이콘 그라데이션) -->
+    <color name="brand_mint">#63F0D2</color>
+    <color name="brand_sky">#3CB8F5</color>
+    <color name="brand_indigo">#3A6DFF</color>
+
+    <!-- 닿다 · glass card -->
+    <color name="card_glass">#99FFFFFF</color>              <!-- 60% -->
+    <color name="card_glass_stroke">#F2FFFFFF</color>       <!-- 95% -->
+
+    <!-- 닿다 · switch -->
+    <color name="switch_track_off">#B8B8B9</color>
+
+    <!-- 닿다 · island -->
+    <color name="island_background">#131417</color>
+
+    <!-- 닿다 · app window background -->
+    <color name="bg_gradient_start">#F4F8FF</color>
+    <color name="bg_gradient_mid">#E6EFFF</color>
+    <color name="bg_gradient_end">#D6E4FF</color>
+    <color name="bg_glow_blue">#8CBFD4FF</color>             <!-- 55% -->
+    <color name="bg_glow_light">#E6E8F6FF</color>            <!-- 90% -->
 </resources>

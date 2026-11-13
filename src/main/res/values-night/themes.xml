@@ -1,16 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Dahta" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <style name="Theme.Dahta" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/informative_positive</item>
+        <item name="colorPrimaryVariant">@color/brand_indigo</item>
+        <item name="colorOnPrimary">@color/text_light_primary</item>
+
+        <item name="colorSecondary">@color/informative_active</item>
+        <item name="colorSecondaryVariant">@color/informative_active</item>
+        <item name="colorOnSecondary">@color/on_informative_active</item>
+
+        <item name="colorSurface">@color/surface_basic</item>
+        <item name="colorOnSurface">@color/text_dark_primary</item>
+        <item name="android:colorBackground">@color/background_primary</item>
+        <item name="colorOnBackground">@color/text_dark_primary</item>
+        <item name="colorError">@color/regulation_red</item>
+        <item name="colorOnError">@color/text_light_primary</item>
+
+        <item name="android:textColorPrimary">@color/text_dark_primary</item>
+        <item name="android:textColorSecondary">@color/text_dark_tertiary</item>
+        
+        <!-- 야간엔 상태바 아이콘을 밝게 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>

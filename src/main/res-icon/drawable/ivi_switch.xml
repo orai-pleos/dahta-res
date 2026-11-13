@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 배려 모드 스위치: 체크 상태에 따라 ON/OFF 모양 전환 (두 상태 모두 80x48 동일 캔버스) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/bg_switch_on"
+        android:state_checked="true" />
+    <item android:drawable="@drawable/bg_switch_off" />
+</selector>

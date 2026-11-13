@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">닿다</string>
+
+    <string name="chip_taxi_care">택시 승객 케어</string>
+    <string name="headline_line1">손님이 내릴 때까지,</string>
+    <string name="headline_line2">닿다가 함께 말해요.</string>
+    <string name="headline_sub">손님 말에 맞춰 언어도 알아서 바꿔요</string>
+
+    <string name="care_mode_title">배려 모드</string>
+    <string name="care_mode_desc">천천히 말하고, 글씨를 크게 보여줘요</string>
+
+    <string name="start_drive">운행 시작하기</string>
+    <string name="start_caption">시작하면 차량과 연결되고, 문이 열리면 알아서 안내해요</string>
+
+    <string name="flow_title">누르지 않아도 알아서 해요</string>
+    <string name="flow_door_title">문이 열리면</string>
+    <string name="flow_door_desc">손님 탑승을 알아채요</string>
+    <string name="flow_greet_title">인사하고</string>
+    <string name="flow_greet_desc">손님 언어를 알아서 맞춰요</string>
+    <string name="flow_listen_title">목적지를 듣고</string>
+    <string name="flow_listen_desc">내비에 바로 넣어요</string>
+    <string name="flow_arrive_title">도착하면</string>
+    <string name="flow_arrive_desc">하차를 안내해요</string>
+
+    <string name="cd_logo">닿다 로고</string>
 </resources>
