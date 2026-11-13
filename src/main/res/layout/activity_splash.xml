@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.orai.dahta.DesignCanvasLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background">
+
+    <!-- Figma 39800:24335: preserve the complete 2560 x 1446 design at every size. -->
+    <FrameLayout
+        android:layout_width="2560dp"
+        android:layout_height="1446dp"
+        android:background="@color/surface_basic">
+
+        <ImageView
+            android:layout_width="2560dp"
+            android:layout_height="1440dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash_background" />
+
+        <ImageView
+            android:layout_width="349dp"
+            android:layout_height="349dp"
+            android:layout_marginLeft="771dp"
+            android:layout_marginTop="545dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash_symbol" />
+
+        <!-- The source wordmark is cropped exactly as in Figma image 16. -->
+        <FrameLayout
+            android:layout_width="669dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="1120dp"
+            android:layout_marginTop="639dp"
+            android:clipChildren="true">
+            <ImageView
+                android:layout_width="732.1536dp"
+                android:layout_height="244.335dp"
+                android:layout_marginLeft="-32.5134dp"
+                android:layout_marginTop="-50.94dp"
+                android:contentDescription="@string/splash_brand"
+                android:scaleType="fitXY"
+                android:src="@drawable/splash_wordmark" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="535dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="1132dp"
+            android:layout_marginTop="800dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/splash_tagline"
+            android:textColor="@color/text_light_primary"
+            android:textSize="48dp" />
+    </FrameLayout>
+</com.orai.dahta.DesignCanvasLayout>
