@@ -1,0 +1,41 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1700" height="1184" viewBox="0 0 1700 1184" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="background">
+<g clip-path="url(#clip0_0_172)">
+<rect width="1700" height="1184" rx="32" fill="url(#paint0_linear_0_172)"/>
+<g id="bg-glow blue" filter="url(#filter0_f_0_172)">
+<circle cx="1500" cy="1010" r="450" fill="#BFD4FF" fill-opacity="0.55"/>
+</g>
+<g id="bg-ring white" filter="url(#filter1_f_0_172)">
+<circle cx="1140" cy="1080" r="380" fill="white" fill-opacity="0.45"/>
+</g>
+<g id="bg-glow light" filter="url(#filter2_f_0_172)">
+<circle cx="150" cy="90" r="350" fill="#E8F6FF" fill-opacity="0.9"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_172" x="1010" y="520" width="980" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="20" result="effect1_foregroundBlur_0_172"/>
+</filter>
+<filter id="filter1_f_0_172" x="752" y="692" width="776" height="776" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_0_172"/>
+</filter>
+<filter id="filter2_f_0_172" x="-260" y="-320" width="820" height="820" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="30" result="effect1_foregroundBlur_0_172"/>
+</filter>
+<linearGradient id="paint0_linear_0_172" x1="0" y1="0" x2="1110.55" y2="1594.54" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F4F8FF"/>
+<stop offset="0.6" stop-color="#E6EFFF"/>
+<stop offset="1" stop-color="#D6E4FF"/>
+</linearGradient>
+<clipPath id="clip0_0_172">
+<rect width="1700" height="1184" rx="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

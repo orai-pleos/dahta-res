@@ -1,0 +1,19 @@
+<resources>
+    <string name="waiting_title">손님을\n기다려요</string>
+    <string name="waiting_connection">차량 연결을 기다리고 있어요</string>
+    <string name="care_status_on">배려 모드 켜짐 · 천천히, 크게 안내해요</string>
+    <string name="care_status_off">배려 모드 꺼짐</string>
+    <string name="end_drive">운행 종료하기</string>
+    <string name="summary_title">오늘 운행을 마쳤어요</string>
+    <string name="summary_subtitle">수고 많으셨어요, 기사님</string>
+    <string name="summary_guests">모신 손님</string>
+    <string name="summary_foreign">외국인 손님</string>
+    <string name="summary_duration">운행 시간</string>
+    <string name="duration_zero">0분</string>
+    <string name="duration_minutes">%1$d분</string>
+    <string name="duration_hours_minutes">%1$d시간 %2$d분</string>
+    <string name="unit_people">명</string>
+    <string name="stat_unavailable">—</string>
+    <string name="summary_privacy">탑승 통계는 차량 연동 후 표시돼요 · 목소리는 저장하지 않았어요</string>
+    <string name="confirm">확인</string>
+</resources>
