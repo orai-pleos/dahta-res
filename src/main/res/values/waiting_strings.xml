@@ -1,0 +1,32 @@
+<resources>
+    <!-- 운행 중 대기 화면 (activity_waiting) -->
+    <string name="waiting_status_running">운행 중</string>
+    <string name="waiting_headline">손님을\n기다리고 있어요</string>
+    <string name="waiting_subline">뒷문이 열리면 알아서 시작해요</string>
+    <string name="waiting_step_door">문 열림</string>
+    <string name="waiting_step_greet">인사</string>
+    <string name="waiting_step_listen">목적지 듣기</string>
+    <string name="end_drive">운행 종료하기</string>
+
+    <!-- 안내 설정 패널 -->
+    <string name="settings_title">안내 설정</string>
+    <string name="settings_stt_label">듣기 언어</string>
+    <string name="settings_tts_label">말하기 언어</string>
+    <string name="settings_speed_label">말하기 속도</string>
+    <string name="settings_tag_stt">STT</string>
+    <string name="settings_tag_tts">TTS</string>
+    <string name="language_ko">한국어</string>
+    <string name="language_en">영어</string>
+    <string name="language_fr">프랑스어</string>
+    <string name="language_es">스페인어</string>
+    <string name="settings_tts_hint">손님 말을 알아들으면 그 언어로 바뀌어요</string>
+    <string name="settings_speed_value">1.0x · 보통</string>
+    <string name="settings_speed_format">%1$sx · %2$s</string>
+    <string name="settings_speed_slow">느림</string>
+    <string name="settings_speed_normal">보통</string>
+    <string name="settings_speed_fast">빠름</string>
+    <string name="settings_speed_slower">말하기 속도 느리게</string>
+    <string name="settings_speed_faster">말하기 속도 빠르게</string>
+    <string name="settings_speed_hint">‹› 한 번에 0.05씩 · 0.5x ~ 1.5x</string>
+    <string name="settings_voice_not_saved">목소리는 저장하지 않아요</string>
+</resources>

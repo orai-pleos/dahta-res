@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  말하기 속도 슬라이더의 가운데 버튼(48 x 48dp 원).
+  평소에는 그림자를 깔아 떠 있는 모양이고, 누르고 있는 동안에는 위로 올라온다(들린다).
+  상태가 바뀔 때 부드럽게 이어지도록 페이드를 건다.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="160"
+    android:exitFadeDuration="160">
+    <item
+        android:drawable="@drawable/bg_slider_thumb_lifted"
+        android:state_pressed="true" />
+    <item android:drawable="@drawable/bg_slider_thumb_resting" />
+</selector>

@@ -1,130 +1,687 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.orai.dahta.DesignCanvasLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+  운행 중 대기 화면. 차량 UI의 앱 영역(오른쪽 패널)만 그린다.
+  Figma 패널 비율에 맞춘 1700 x 1184dp 캔버스를 DesignCanvasLayout 이 창 크기에 맞게 줄인다.
+  왼쪽: 닿다 상태 카드(손님 대기 / 진행 단계 / 운행 종료)  오른쪽: 안내 설정 카드
+-->
+<com.orai.dahta.DesignCanvasLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_canvas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gradient_start">
+
     <FrameLayout
-        android:layout_width="840dp"
+        android:layout_width="1700dp"
         android:layout_height="1184dp"
-        android:background="@drawable/figma_wait_background">
+        android:background="@drawable/figma_main_background">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingStart="44dp"
-            android:paddingEnd="44dp"
-            android:paddingTop="40dp"
-            android:paddingBottom="40dp">
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingStart="64dp"
+            android:paddingTop="55dp"
+            android:paddingEnd="64dp"
+            android:paddingBottom="65dp">
+
+            <!-- ========== 왼쪽: 닿다 상태 ========== -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:src="@drawable/figma_main_logo"
-                    android:scaleType="fitXY"
-                    android:importantForAccessibility="yes"
-                    android:contentDescription="@string/cd_logo"/>
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="884"
+                android:background="@drawable/bg_card_glass"
+                android:orientation="vertical"
+                android:paddingStart="58dp"
+                android:paddingTop="51dp"
+                android:paddingEnd="58dp"
+                android:paddingBottom="47dp">
+
+                <!-- 헤더: 로고 + 닿다 운행 중 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:contentDescription="@string/cd_logo"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/figma_main_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:fontFamily="@font/bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/app_name"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="52sp" />
+
+                    <TextView
+                        android:id="@+id/waiting_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bg_pill_white"
+                        android:drawablePadding="14dp"
+                        android:fontFamily="@font/medium"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:text="@string/waiting_status_running"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp"
+                        app:drawableStartCompat="@drawable/ic_status_dot" />
+                </LinearLayout>
+
+                <!-- 손님 대기 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/waiting_status_card"
+                    style="@style/Widget.Dahta.RaisedCard"
+                    android:layout_height="303dp"
+                    android:layout_marginTop="95dp"
+                    android:background="@drawable/bg_card_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="49dp"
+                    android:paddingEnd="32dp">
+
+                    <FrameLayout
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/bg_circle_tint">
+
+                        <FrameLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_wait_ring_inner">
+
+                            <FrameLayout
+                                android:layout_width="128dp"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_circle_blue">
+
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/figma_wait_car" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="41dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="8dp"
+                            android:text="@string/waiting_headline"
+                            android:textColor="@color/text_dark_primary"
+                            android:textSize="52sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/waiting_subline"
+                            android:textColor="@color/text_dark_tertiary"
+                            android:textSize="28sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 진행 단계: 문 열림 > 인사 > 목적지 듣기 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/waiting_steps_card"
+                    style="@style/Widget.Dahta.RaisedCard"
+                    android:layout_height="136dp"
+                    android:layout_marginTop="95dp"
+                    android:background="@drawable/bg_card_white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/bg_circle_blue">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/figma_wait_car" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/waiting_step_door"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="31sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginEnd="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/figma_arrow"
+                        app:tint="@color/text_dark_primary" />
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/bg_circle_blue">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/figma_speaker"
+                            app:tint="@color/text_light_primary" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/waiting_step_greet"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="31sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginEnd="22dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/figma_arrow"
+                        app:tint="@color/text_dark_primary" />
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/bg_circle_blue">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/figma_mic"
+                            app:tint="@color/text_light_primary" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/waiting_step_listen"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="31sp" />
+                </LinearLayout>
+
+                <!-- 운행 종료하기 (시안에 있는 버튼. 동작은 아직 연결하지 않았다) -->
+                <LinearLayout
+                    style="@style/Widget.Dahta.RaisedButton"
+                    android:id="@+id/btn_end_drive"
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:layout_marginTop="95dp"
+                    android:background="@drawable/bg_card_white"
+                    android:contentDescription="@string/end_drive"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semi_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/end_drive"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="42sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ========== 오른쪽: 안내 설정 ========== -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_weight="640"
+                android:background="@drawable/bg_card_white"
+                android:orientation="vertical"
+                android:paddingStart="49dp"
+                android:paddingTop="44dp"
+                android:paddingEnd="49dp"
+                android:paddingBottom="30dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
                     android:fontFamily="@font/bold"
-                    android:text="@string/app_name"
-                    android:textSize="48sp"
-                    android:textColor="@color/text_dark_primary"
-                    android:layout_marginStart="16dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginTop="32dp"
-                android:paddingStart="32dp"
-                android:paddingEnd="32dp"
-                android:paddingTop="28dp"
-                android:paddingBottom="28dp"
-                android:background="@drawable/bg_card_glass">
-                <FrameLayout
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:background="@drawable/bg_circle_tint">
-                    <FrameLayout
-                        android:layout_width="148dp"
-                        android:layout_height="148dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/bg_wait_ring_inner">
-                        <FrameLayout
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/bg_circle_blue">
-                            <ImageView
-                                android:layout_width="52dp"
-                                android:layout_height="52dp"
-                                android:src="@drawable/figma_wait_car"
-                                android:scaleType="fitXY"
-                                android:importantForAccessibility="no"
-                                android:layout_gravity="center"/>
-                        </FrameLayout>
-                    </FrameLayout>
-                </FrameLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="152dp"
                     android:includeFontPadding="false"
-                    android:fontFamily="@font/bold"
-                    android:text="@string/waiting_title"
-                    android:textSize="64sp"
+                    android:text="@string/settings_title"
                     android:textColor="@color/text_dark_primary"
-                    android:gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:lineSpacingExtra="0dp"/>
-                <TextView
+                    android:textSize="42sp" />
+
+                <!-- 듣기 언어 (STT) -->
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:includeFontPadding="false"
-                    android:fontFamily="@font/medium"
-                    android:text="@string/waiting_connection"
-                    android:textSize="32sp"
-                    android:textColor="@color/text_dark_secondary"
-                    android:gravity="center"
-                    android:layout_marginTop="16dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:orientation="horizontal"
-                android:id="@+id/care_status"
-                android:gravity="center_vertical"
-                android:paddingStart="28dp"
-                android:paddingEnd="28dp"
-                android:layout_marginTop="32dp"
-                android:background="@drawable/bg_care_enabled">
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/figma_status_dot"
-                    android:scaleType="fitXY"
-                    android:importantForAccessibility="no"
-                    android:id="@+id/care_status_dot"/>
-                <TextView
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
+                    android:layout_marginTop="34dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/figma_mic"
+                        app:tint="@color/text_dark_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/settings_stt_label"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="29sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_tag"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:paddingStart="14dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/settings_tag_stt"
+                        android:textColor="@color/text_dark_tertiary"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/segment_stt"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/bg_segment_track"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_segment_selected"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_ko"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_en"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_fr"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_es"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="31dp"
+                    android:background="@color/divider_secondary" />
+
+                <!-- 말하기 언어 (TTS) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/figma_speaker"
+                        app:tint="@color/text_dark_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/settings_tts_label"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="29sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_tag"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:paddingStart="14dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/settings_tag_tts"
+                        android:textColor="@color/text_dark_tertiary"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/segment_tts"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/bg_segment_track"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_segment_selected"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_ko"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_en"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_fr"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/language_es"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
                     android:fontFamily="@font/medium"
-                    android:text="@string/care_status_on"
-                    android:textSize="28sp"
-                    android:textColor="@color/text_dark_primary"
-                    android:layout_weight="1"
-                    android:layout_marginStart="14dp"
-                    android:id="@+id/care_status_text"/>
+                    android:includeFontPadding="false"
+                    android:text="@string/settings_tts_hint"
+                    android:textColor="@color/text_dark_tertiary"
+                    android:textSize="23sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/divider_secondary" />
+
+                <!-- 말하기 속도 (TTS) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/figma_speaker"
+                        app:tint="@color/text_dark_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/semi_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/settings_speed_label"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="29sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_tag"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:paddingStart="14dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/settings_tag_tts"
+                        android:textColor="@color/text_dark_tertiary"
+                        android:textSize="20sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/speech_speed_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semi_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/settings_speed_value"
+                        android:textColor="@color/text_dark_primary"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_slider_box"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="22dp"
+                    android:paddingEnd="22dp">
+
+                    <ImageView
+                        android:id="@+id/speech_speed_minus"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:contentDescription="@string/settings_speed_slower"
+                        android:rotation="180"
+                        android:src="@drawable/figma_arrow"
+                        app:tint="@color/text_dark_primary" />
+
+                    <!-- 0.5x ~ 1.5x 를 0.05 단위로 20칸. 가운데(10)가 1.0x -->
+                    <SeekBar
+                        android:id="@+id/speech_speed_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="76dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:max="20"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:progress="10"
+                        android:progressTint="@color/surface_accent"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/bg_slider_thumb" />
+
+                    <ImageView
+                        android:id="@+id/speech_speed_plus"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:contentDescription="@string/settings_speed_faster"
+                        android:src="@drawable/figma_arrow"
+                        app:tint="@color/text_dark_primary" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/settings_speed_hint"
+                    android:textColor="@color/text_dark_tertiary"
+                    android:textSize="23sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/divider_secondary" />
+
+                <!-- 배려 모드 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:includeFontPadding="false"
+                            android:text="@string/care_mode_title"
+                            android:textColor="@color/text_dark_primary"
+                            android:textSize="31sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/care_mode_desc"
+                            android:textColor="@color/text_dark_tertiary"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/switch_care_mode"
+                        android:layout_width="80dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ivi_switch"
+                        android:button="@null"
+                        android:contentDescription="@string/care_mode_title" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@color/divider_secondary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/settings_voice_not_saved"
+                    android:textColor="@color/text_dark_tertiary"
+                    android:textSize="23sp" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

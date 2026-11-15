@@ -40,11 +40,22 @@
     <color name="card_glass">#99FFFFFF</color>              <!-- 60% -->
     <color name="card_glass_stroke">#F2FFFFFF</color>       <!-- 95% -->
 
+    <!-- 닿다 · 버튼 그림자 (Figma: 바깥 그림자 Y 16, 흐림 48, 색 #131417) -->
+    <color name="shadow_spot">#4D131417</color>
+    <color name="shadow_ambient">#26131417</color>
+
+    <!-- 닿다 · 카드 그림자 (Figma: X 0, Y 16, 흐림 56, 색 #2954C7 8%) -->
+    <color name="shadow_card_spot">#142954C7</color>
+    <color name="shadow_card_ambient">#142954C7</color>
+
+    <!-- 닿다 · 다이나믹 아일랜드 그림자 (Figma: X 0, Y 20, 흐림 60, 색 #000000 28%) -->
+    <color name="shadow_island_spot">#47000000</color>
+    <color name="shadow_island_ambient">#14000000</color>
+
     <!-- 닿다 · switch -->
     <color name="switch_track_off">#B8B8B9</color>
 
     <!-- 닿다 · island -->
-    <color name="island_background">#131417</color>
     <color name="island_on_background">#FFFFFF</color>
     <color name="island_on_background_secondary">#B8FFFFFF</color>  <!-- 72% -->
     <color name="island_call_stroke">#1A131417</color>             <!-- 10% -->

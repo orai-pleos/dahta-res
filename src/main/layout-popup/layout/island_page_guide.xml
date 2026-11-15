@@ -4,6 +4,7 @@
   안내 순간과 도착은 문구만 다르며, GuideIslandPage 가 채운다.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.Dahta.IslandShadow"
     android:layout_width="1062dp"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_island_expanded"
@@ -67,7 +68,7 @@
             android:layout_width="29dp"
             android:layout_height="29dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_island_speaker" />
+            android:src="@drawable/figma_speaker" />
 
         <TextView
             android:id="@+id/island_caption"

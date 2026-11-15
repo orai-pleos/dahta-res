@@ -1,8 +1,4 @@
 <resources>
-    <string name="waiting_title">손님을\n기다려요</string>
-    <string name="waiting_connection">차량 연결을 기다리고 있어요</string>
-    <string name="care_status_on">배려 모드 켜짐 · 천천히, 크게 안내해요</string>
-    <string name="care_status_off">배려 모드 꺼짐</string>
     <string name="summary_title">오늘 운행을 마쳤어요</string>
     <string name="summary_subtitle">수고 많으셨어요, 기사님</string>
     <string name="summary_guests">모신 손님</string>

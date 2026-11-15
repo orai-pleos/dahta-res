@@ -1,0 +1,10 @@
+<resources>
+    <!--
+      섬(오버레이 창) 둘레 여백. 그림자(Y 20 / 흐림 60)가 창 가장자리에서 잘리지 않게 그릴 자리다.
+      view_island 틀의 padding 과 IslandOverlayService 의 위치 계산이 같은 값을 쓴다.
+      위쪽은 그림자가 거의 안 번져서 작게, 아래쪽은 Y 오프셋만큼 크게 잡았다.
+    -->
+    <dimen name="island_shadow_padding_top">24dp</dimen>
+    <dimen name="island_shadow_padding_side">56dp</dimen>
+    <dimen name="island_shadow_padding_bottom">88dp</dimen>
+</resources>

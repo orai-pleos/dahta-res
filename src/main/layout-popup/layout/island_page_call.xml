@@ -4,6 +4,7 @@
   새 호출이 들어왔어요 + [모시러 가기] [나중에]. 버튼 동작은 CallIslandPage 가 연결한다.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.Dahta.IslandShadow"
     android:layout_width="691dp"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_island_call"

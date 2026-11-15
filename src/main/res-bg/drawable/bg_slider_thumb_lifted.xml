@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 슬라이더 thumb: 누르는 중. 본체가 위로 6dp 올라오고 그림자는 더 멀리, 더 넓게 퍼진다 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 그림자(바깥, 넓고 옅게) -->
+    <item
+        android:bottom="-10dp"
+        android:left="-8dp"
+        android:right="-8dp"
+        android:top="10dp">
+        <shape android:shape="oval">
+            <solid android:color="#14131417" />
+            <size
+                android:width="48dp"
+                android:height="48dp" />
+        </shape>
+    </item>
+    <!-- 그림자(안쪽) -->
+    <item
+        android:bottom="-10dp"
+        android:left="-3dp"
+        android:right="-3dp"
+        android:top="10dp">
+        <shape android:shape="oval">
+            <solid android:color="#26131417" />
+            <size
+                android:width="48dp"
+                android:height="48dp" />
+        </shape>
+    </item>
+    <!-- thumb 본체: 위로 올라온다 -->
+    <item
+        android:bottom="6dp"
+        android:top="-6dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/text_dark_primary" />
+            <size
+                android:width="48dp"
+                android:height="48dp" />
+        </shape>
+    </item>
+</layer-list>
