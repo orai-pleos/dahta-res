@@ -14,12 +14,16 @@
     <FrameLayout
         android:layout_width="1700dp"
         android:layout_height="1184dp"
-        android:background="@drawable/figma_main_background">
+        android:background="@drawable/figma_main_background"
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:baselineAligned="false"
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:orientation="horizontal"
             android:paddingStart="64dp"
             android:paddingTop="55dp"
@@ -42,6 +46,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -64,6 +70,7 @@
 
                     <TextView
                         android:id="@+id/waiting_status"
+                        style="@style/Widget.Dahta.RaisedCard"
                         android:layout_width="wrap_content"
                         android:layout_height="63dp"
                         android:background="@drawable/bg_pill_white"
@@ -251,7 +258,7 @@
 
                 <!-- 운행 종료하기 (시안에 있는 버튼. 동작은 아직 연결하지 않았다) -->
                 <LinearLayout
-                    style="@style/Widget.Dahta.RaisedButton"
+                    style="@style/Widget.Dahta.RaisedCard"
                     android:id="@+id/btn_end_drive"
                     android:layout_width="match_parent"
                     android:layout_height="148dp"

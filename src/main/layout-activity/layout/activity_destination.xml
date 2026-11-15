@@ -10,11 +10,15 @@
     <FrameLayout
         android:layout_width="1700dp"
         android:layout_height="1184dp"
-        android:background="@drawable/figma_main_background">
+        android:background="@drawable/figma_main_background"
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:orientation="vertical"
             android:paddingStart="43dp"
             android:paddingTop="41dp"
@@ -46,8 +50,9 @@
                     android:textSize="42sp" />
             </LinearLayout>
 
-            <!-- 유리 카드 -->
+            <!-- 유리 카드 (그림자: X 0 / Y 16 / 흐림 56 / #2954C7 8%) -->
             <FrameLayout
+                style="@style/Widget.Dahta.RaisedCard"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="32dp"
@@ -153,7 +158,7 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                style="@style/Widget.Dahta.RaisedButton"
+                                style="@style/Widget.Dahta.RaisedCard"
                                 android:id="@+id/btn_listen_again"
                                 android:layout_width="wrap_content"
                                 android:layout_height="70dp"
@@ -186,7 +191,7 @@
 
                         <!-- 1번(선택됨) -->
                         <LinearLayout
-                            style="@style/Widget.Dahta.RaisedButton"
+                            style="@style/Widget.Dahta.RaisedCard"
                             android:id="@+id/destination_result_1"
                             android:layout_width="match_parent"
                             android:layout_height="157dp"
@@ -255,7 +260,7 @@
 
                         <!-- 2번 -->
                         <LinearLayout
-                            style="@style/Widget.Dahta.RaisedButton"
+                            style="@style/Widget.Dahta.RaisedCard"
                             android:id="@+id/destination_result_2"
                             android:layout_width="match_parent"
                             android:layout_height="153dp"
@@ -324,7 +329,7 @@
 
                         <!-- 3번 -->
                         <LinearLayout
-                            style="@style/Widget.Dahta.RaisedButton"
+                            style="@style/Widget.Dahta.RaisedCard"
                             android:id="@+id/destination_result_3"
                             android:layout_width="match_parent"
                             android:layout_height="153dp"

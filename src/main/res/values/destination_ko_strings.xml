@@ -1,0 +1,19 @@
+<resources>
+    <!-- 목적지 확인 화면 · 한국어 손님 (activity_destination_ko). 화면 확인용 예시 데이터 -->
+    <string name="destination_ko_result_summary">\'경복궁\' 검색 결과 3곳 · 가까운 순</string>
+    <string name="destination_ko_heard_label">손님이 이렇게 말했어요 · 한국어</string>
+    <string name="destination_ko_heard_text">경복궁 가 주세요</string>
+
+    <string name="destination_ko_result_1_name">경복궁</string>
+    <string name="destination_ko_result_1_type">고궁</string>
+    <string name="destination_ko_result_1_distance">2.1km</string>
+    <string name="destination_ko_result_1_address">서울 종로구 세종로</string>
+    <string name="destination_ko_result_2_name">국립고궁박물관</string>
+    <string name="destination_ko_result_2_type">박물관</string>
+    <string name="destination_ko_result_2_distance">2.2km</string>
+    <string name="destination_ko_result_2_address">서울 종로구 세종로</string>
+    <string name="destination_ko_result_3_name">경복궁역 3호선</string>
+    <string name="destination_ko_result_3_type">지하철역</string>
+    <string name="destination_ko_result_3_distance">2.4km</string>
+    <string name="destination_ko_result_3_address">서울 종로구 적선동</string>
+</resources>
