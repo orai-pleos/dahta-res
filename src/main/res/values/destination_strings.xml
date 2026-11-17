@@ -4,22 +4,24 @@
     <string name="destination_listening_hint">목적지를 말씀해 주세요</string>
     <string name="destination_listening_prompt">어디로 모실까요?\n목적지를 말씀해 주세요</string>
 
-    <string name="destination_result_summary">\'서울대병원\' 검색 결과 3곳 · 가까운 순</string>
+    <string name="destination_result_summary">\'경복궁\' 검색 결과 3곳 · 가까운 순</string>
+    <!-- %1$s: 손님이 말한 문장 -->
+    <string name="destination_result_summary_format">\'%1$s\' 검색 결과 3곳 · 가까운 순</string>
     <string name="destination_listen_again">다시 듣기</string>
-    <string name="destination_heard_label">손님이 이렇게 말했어요</string>
-    <string name="destination_heard_text">서울대병원\n가 주세요</string>
+    <string name="destination_heard_label">손님이 이렇게 말했어요 · 한국어</string>
+    <string name="destination_heard_text">경복궁 가 주세요</string>
 
     <!-- 검색 결과 (화면 확인용 예시 데이터. 실제 검색 결과로 교체) -->
-    <string name="destination_result_1_name">서울대학교병원</string>
-    <string name="destination_result_1_type">종합병원</string>
-    <string name="destination_result_1_distance">8.7km</string>
-    <string name="destination_result_1_address">서울 종로구 연건동</string>
-    <string name="destination_result_2_name">서울대학교어린이병원</string>
-    <string name="destination_result_2_type">종합병원</string>
-    <string name="destination_result_2_distance">8.8km</string>
-    <string name="destination_result_2_address">서울 종로구 연건동</string>
-    <string name="destination_result_3_name">분당서울대학교병원</string>
-    <string name="destination_result_3_type">종합병원</string>
-    <string name="destination_result_3_distance">21km</string>
-    <string name="destination_result_3_address">경기 성남시 분당구 구미동</string>
+    <string name="destination_result_1_name">경복궁</string>
+    <string name="destination_result_1_type">고궁</string>
+    <string name="destination_result_1_distance">2.1km</string>
+    <string name="destination_result_1_address">서울 종로구 세종로</string>
+    <string name="destination_result_2_name">국립고궁박물관</string>
+    <string name="destination_result_2_type">박물관</string>
+    <string name="destination_result_2_distance">2.2km</string>
+    <string name="destination_result_2_address">서울 종로구 세종로</string>
+    <string name="destination_result_3_name">경복궁역 3호선</string>
+    <string name="destination_result_3_type">지하철역</string>
+    <string name="destination_result_3_distance">2.4km</string>
+    <string name="destination_result_3_address">서울 종로구 적선동</string>
 </resources>

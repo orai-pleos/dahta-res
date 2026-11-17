@@ -24,6 +24,11 @@
     <string name="island_call_accept">모시러 가기</string>
     <string name="island_call_later">나중에</string>
 
+    <!-- 손님 마중(호출을 잡고 탑승 지점으로 가는 중) -->
+    <string name="island_pickup_km">%1$.1fkm</string>
+    <string name="island_pickup_m">%1$dm</string>
+    <string name="island_pickup_arrived">도착</string>
+
     <string name="island_notification_channel">운행 상태</string>
     <string name="island_notification_title">닿다 운행 중</string>
     <string name="island_notification_text">손님 안내 상태를 내비 위에 표시하고 있어요</string>

@@ -90,7 +90,8 @@
                                     android:layout_height="56dp"
                                     android:layout_gravity="center"
                                     android:importantForAccessibility="no"
-                                    android:src="@drawable/figma_mic" />
+                                    android:src="@drawable/figma_mic"
+                                    android:tint="@android:color/white" />
                             </FrameLayout>
                         </FrameLayout>
                     </FrameLayout>
@@ -147,6 +148,7 @@
                                     android:textSize="40sp" />
 
                                 <TextView
+                                    android:id="@+id/destination_summary"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -437,6 +439,7 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/destination_heard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="26dp"
